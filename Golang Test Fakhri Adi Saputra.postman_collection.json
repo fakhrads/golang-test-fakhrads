@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "be6ea13e-18b1-4c21-b0b7-1d4cdade8d7a",
+		"name": "Golang Test Fakhri Adi Saputra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8642679"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Fakhri Adi Saputra\",\r\n  \"email\": \"fakhriadisaputra15@gmail.com\",\r\n  \"address\": \"Jakarta\",\r\n  \"password\": \"inicumanpassword\",\r\n  \"photos\": {\r\n    \"1\": \"path/to/photo1.jpg\",\r\n    \"2\": \"path/to/photo2.jpg\"\r\n  },\r\n  \"creditcard\": {\r\n    \"creditcard_type\": \"Visa\",\r\n    \"creditcard_number\": \"1234567890123456\",\r\n    \"creditcard_name\": \"Fakhri Adi Saputra\",\r\n    \"creditcard_expired\": \"12/28\",\r\n    \"creditcard_cvv\": \"123\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/user/list?q=Fakhri",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"list"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Fakhri"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/user/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"name\": \"Fakhri Adi Saputra\",\r\n    \"email\": \"fakhriadisaputra15@gmail.com\",\r\n    \"address\": \"Ini Yang Berubah\",\r\n    \"password\": \"securepassword\",\r\n    \"photos\": {\r\n        \"1\": \"path/to/photo1.jpg\",\r\n        \"2\": \"path/to/photo2.jpg\"\r\n    },\r\n    \"creditcard\": {\r\n        \"creditcard_type\": \"Visa\",\r\n        \"creditcard_number\": \"1234567890123456\",\r\n        \"creditcard_name\": \"John Doe\",\r\n        \"creditcard_expired\": \"12/24\",\r\n        \"creditcard_cvv\": \"123\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
